@@ -1,3 +1,4 @@
+import SingleProduct from "components/general/SingleProduct";
 import { ALL_PRODUCTS_QUERY } from "graphql/queries";
 import { Product } from "graphql/types";
 import client from "lib/apolloClient";
@@ -13,8 +14,8 @@ const SingleProductPage: React.FC<SingleProductPageProps> = ({ product }) => {
             <Head>
                 <title>{product.title}</title>
             </Head>
-            <h1>{product.title}</h1>
-            {/* <SingleProduct product={product} /> */}
+            
+            <SingleProduct product={product}/>
         </>
     );
 };
